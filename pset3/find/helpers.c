@@ -12,11 +12,48 @@
 #include "helpers.h"
 
 /**
+ * Search for value in an array using binary method
+ */
+bool binarySearch(int value, int values[], int left, int right)
+{
+    if (left > right)
+    {
+        return false;
+    }
+
+    int middle = (left + right) / 2;
+
+    if (values[middle] < value)
+    {
+        return binarySearch(value, values, middle + 1, right); 
+    }
+    else if (values[middle] > value)
+    {
+        return binarySearch(value, values, left, middle - 1);
+    }
+    else
+    {
+        return true;
+    }
+}
+
+/**
+ * Swaps two values
+ */
+void swap(int *a, int *b)
+{
+    int temp;
+    temp = *b;
+    *b = *a;
+    *a = temp;
+}
+
+/**
  * Returns true if value is in array of n values, else false.
  */
 bool search(int value, int values[], int n)
 {
-    return binarySearch(value, values[], 0, n - 1);
+    return binarySearch(value, values, 0, n - 1);
 }
 
 /**
@@ -41,41 +78,4 @@ void sort(int values[], int n)
     } while (swapped == true);
 
     counter++;
-}
-
-/**
- * Swaps two values
- */
-void swap(int *a, int *b)
-{
-    int temp;
-    temp = *b;
-    *b = *a;
-    *a = temp;
-}
-
-/**
- * Search for value in an array using binary method
- */
-bool binarySearch(int value, int values[], int left, int right)
-{
-    if (left > right)
-    {
-        return false;
-    }
-
-    int middle = (left + right) / 2;
-
-    if (values[middle] < value)
-    {
-        return binarySearch(value, values, middle + 1, right); 
-    }
-    else if (values[middle] > value)
-    {
-        return binarySearch(value, values, left, middle - 1);
-    }
-    else
-    {
-        return true;
-    }
 }
