@@ -1,0 +1,11 @@
+0.  Pneumonoultramicroscopicsilicovolcanoconiosis is an english name of lung desease. This is the longest word in english dictionary.
+1.  Rusage returns resource usage measure for the calling process, it's children or thread.
+2.  16
+3.  We pass before and after by reference because of speed. Copying such a large structures is quite costly.
+4.  It reads the file character by character. If the character is alphabetic it start adding letters to the word array. It skips the numeric characters. If there is minimum one letter in the word and the iterator encounters any other character that means the word is over. Then the word is spellchecked.
+5.  The scanf function input need to be 100% accurate so if something is not formatted correctly the scanf won't work properly. It is better to use fgetc to first read the file character by character and then parse it's content.
+6.  The parameters for check and load are constants because we mustn't change the values standing behind them.
+7.  I've used a structure of boolean value indicating end of the word and an array of pointers to the same structure representing each character.
+8.  0.14ms
+9.  I think that I did a pretty good job the first time I've done it. It runs only 0.02ms slower than staff's speller
+10. Nope, everything looks fine.
