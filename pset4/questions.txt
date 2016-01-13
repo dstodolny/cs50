@@ -1,0 +1,20 @@
+0.  BMP: 16M, GIF: 256, JPEG: 16M, PNG: 256T
+1.  GIF
+2.  Lossless compression reduces file size preserving a perfect copy of the original uncompressed image.
+    Lossy compresion generally reduces files to a smaller sizes than lossles but the image is not a perfect copy.
+3.  JPEG
+4.  The data stored in the Data Area remains intact until it is overwritten however the list of disk clusters occupied by the file will be erased from the File Allocation Table marking those sector available for use.
+5.  The relatively secure way is to overwrite the files a couple of times with random data.
+6.  stdint.h is a header file with a set of typedefs that specify exact-width integer types
+7.  These definition enhance the portability of programs as they define fixed-width integer types. The basic integer type differes memory allocation from machine to machine.
+8.  BYTE: 1, DWORD: 4, LONG: 4, WORD: 2
+9.  BM
+10. biSize represents the number of bytes required by the structure while bfSize represents the size in bytes of the bitmap file
+11. If biHeight is negative the bitmap is a top-down DIB (Devise-independent bitmap) and it's origin is at the upper-left corner
+12. biBitCount
+13. If file exists and you don't have permission to write then the fopen will return NULL
+14. Because we want to copy the file piece by piece. The third arguments indicated how many elements of size will be read
+15. 1
+16. fseek sets the file position of the stream to the given offset
+17. Current position of the file pointer
+18. Rob Bowden with a cat
